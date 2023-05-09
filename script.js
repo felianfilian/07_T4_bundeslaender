@@ -8,3 +8,7 @@ let states = [
 ];
 
 let stateContainer = document.getElementById("state-container");
+
+function render() {
+  stateContainer.innerHTML = "Hello";
+}
