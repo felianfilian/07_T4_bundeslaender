@@ -130,8 +130,11 @@ function render() {
 }
 
 function addcomment(index) {
-  states[index]["comments"].push(
-    document.getElementById("input-" + index).value
-  );
-  render();
+  let inputValue = document.getElementById("input-" + index).value;
+  if (inputValue != "") {
+    states[index]["comments"].push(inputValue);
+    render();
+  } else {
+    alert("Bitte Kommentar schreiben");
+  }
 }

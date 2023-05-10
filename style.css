@@ -3,6 +3,24 @@ body {
   font-size: 18px;
 }
 
+input {
+  padding: 5px 20px;
+  font-size: 18px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 20px;
+
+  background-color: rgb(0, 38, 133);
+  color: #fff;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: rgb(6, 51, 162);
+}
+
 #state-container {
   display: flex;
   justify-content: center;
