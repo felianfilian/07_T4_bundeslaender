@@ -21,6 +21,10 @@ button:hover {
   background-color: rgb(6, 51, 162);
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 #state-container {
   display: flex;
   justify-content: center;

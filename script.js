@@ -118,10 +118,12 @@ function render() {
 
     stateContainer.innerHTML += `
     <div class="state-item">
-      ${states[i]["name"]}
-      <br><br>
-      ${comments}
-      <br>
+      <div class="mb-20">
+        ${states[i]["name"]}
+      </div>
+      <div class="mb-20">
+        ${comments}
+      </div>
       <input id="input-${i}" type="text" placeholder="Neuer Kommentar">
       <button onclick="addcomment(${i})">Hinzufügen</button>
     </div>
