@@ -13,12 +13,23 @@ body {
 
 .state-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 30%;
-  height: 100px;
+  min-height: 100px;
 
-  background-color: rgb(232, 232, 232);
-  border: 1px solid #000;
+  padding: 10px;
+
+  background-color: rgb(251, 251, 251);
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1130px) {
+  .state-item {
+    width: 46%;
+  }
 }

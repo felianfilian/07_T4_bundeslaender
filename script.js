@@ -103,9 +103,35 @@ let states = [
 let stateContainer = document.getElementById("state-container");
 
 function render() {
+  stateContainer.innerHTML = "";
+  let comments = "";
   for (let i = 0; i < states.length; i++) {
-    stateContainer.innerHTML = `
-    <div class="state-item">${states[i]["name"]}</div>
+    comments = "";
+
+    for (let j = 0; j < states[i]["comments"].length; j++) {
+      comments += `
+      <div>
+      + ${states[i]["comments"][j]}
+      </div>
+      `;
+    }
+
+    stateContainer.innerHTML += `
+    <div class="state-item">
+      ${states[i]["name"]}
+      <br><br>
+      ${comments}
+      <br>
+      <input id="input-${i}" type="text" placeholder="Neuer Kommentar">
+      <button onclick="addcomment(${i})">Hinzufügen</button>
+    </div>
     `;
   }
+}
+
+function addcomment(index) {
+  states[index]["comments"].push(
+    document.getElementById("input-" + index).value
+  );
+  render();
 }
