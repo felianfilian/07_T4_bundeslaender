@@ -103,5 +103,9 @@ let states = [
 let stateContainer = document.getElementById("state-container");
 
 function render() {
-  //stateContainer.innerHTML = "Hello";
+  for (let i = 0; i < states.length; i++) {
+    stateContainer.innerHTML = `
+    <div class="state-item">${states[i]["name"]}</div>
+    `;
+  }
 }
